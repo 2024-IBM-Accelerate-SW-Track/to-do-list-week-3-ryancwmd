@@ -1,4 +1,4 @@
-import { render, screen, fireEvent} from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
 import App from './App';
 

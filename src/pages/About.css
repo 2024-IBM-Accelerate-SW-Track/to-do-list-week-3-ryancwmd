@@ -10,7 +10,7 @@
 
 .left {
   left: 0;
-  background-color: #0f62fe;
+  background-color: #8b10fe;
 }
 
 .right {
@@ -30,13 +30,46 @@
   color: black;
   text-align: left;
   padding-bottom: 20px;
+  font-family: 'Brush Script MT', cursive;
 }
 
 .brief_description {
   text-align: left;
+  font-size: 18px;
+  font-family: 'Brush Script MT', cursive;
 }
 
 .profile_image {
   width: 500px;
   height: auto;
+}
+
+li::marker{
+  font-size: 22px;
+}
+
+li:nth-child(1){
+  list-style-type: '🤗';
+  padding-inline-start: 1ch;
+}
+li:nth-child(2){
+  list-style-type: '🏫';
+  padding-inline-start: 1ch;
+}
+li:nth-child(3){
+  list-style-type: '🍲';
+  padding-inline-start: 1ch;
+}
+li:nth-child(4){
+  list-style-type: '🎮';
+  padding-inline-start: 1ch;
+}
+li:nth-child(5){
+  list-style-type: '🏸';
+  padding-inline-start: 1ch;
+}
+
+li:nth-child(6){
+  list-style-type: '💼';
+  padding-inline-start: 1ch;
 }
