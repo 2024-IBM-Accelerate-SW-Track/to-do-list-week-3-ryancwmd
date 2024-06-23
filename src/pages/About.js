@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./About.css";
 import profile_pic from "../assets/profile_pic.jpg";
+import "./About.css";
 
 export default class About extends Component {
   render() {
@@ -18,10 +18,28 @@ export default class About extends Component {
         </div>
         <div className="split right">
           <div className="centered">
-            <div className="name_title">Your Name</div>
+            <div className="name_title">Ryan Whittaker</div>
             <div className="brief_description">
-              Tell us about yourself in a few sentences. Tell us your interests
-              and say a fun fact about yourself.
+            <ul>
+                <li>Nice to meet you, I am Ryan Whittaker!</li>
+                <li>I am studying Computer Science and Traditional
+                    Mathematics at the University of Maryland College 
+                    Park. Here, I am a part of a variety of clubs 
+                    including the Korean Student Association, 
+                    Vietnamese Student Association, and Terraformers.</li>
+                <li>For fun I like to hangout with my friends and fam, 
+                  especially when we are eating food.
+                </li>
+                <li>I also love to play video games including Minecraft, 
+                  Valorant, and Brawl Stars.
+                </li>
+                <li>I play badminton for fun and also joined the badminton
+                  club at UMD.
+                </li>
+                <li>This summer I am interning at Lumo Imaging in addition
+                  to doing IBM Accelerate and CodePath.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
