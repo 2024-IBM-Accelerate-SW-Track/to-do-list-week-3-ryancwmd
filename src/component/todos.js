@@ -12,10 +12,12 @@ import "../component/todos.css";
 const Todos = ({ todos, deleteTodo }) => {  
   const todoList = todos.length ? (
     todos.map((todo) => {
+      let todoDate = new Date(todo.duedate);
+      let date = new Date();
       let color = "white";
-      if(parseInt(new Date().getFullYear()) > parseInt(new Date(todo.duedate).getFullYear()) || 
-      parseInt(new Date().getMonth()) > parseInt(new Date(todo.duedate).getMonth()) ||
-      parseInt(new Date().getDay()) > parseInt(new Date(todo.duedate).getDay())) {
+      if(parseInt(date.getFullYear()) > parseInt(todoDate.getFullYear()) || 
+      parseInt(date.getMonth()) > parseInt(todoDate.getMonth()) ||
+      parseInt(date.getDate()) > parseInt(todoDate.getDate())) {
         color = "#FF5B61";
       }
       return (
@@ -25,7 +27,9 @@ const Todos = ({ todos, deleteTodo }) => {
             AddTodo.js. All we need to do is return the todo list item {todo.content} */}
               <ListItemButton component="a" href="#simple-list">
                 <Checkbox style={{paddingLeft:0}} color={'primary'} onClick={() => deleteTodo(todo.id)}/>
-                <ListItemText primary={todo.content} secondary={'Due: ' + new Date(todo.duedate).toLocaleDateString()}/>
+                <ListItemText primary={todo.content} secondary={'Due: '  + (todoDate.getMonth() < 9 ? "0" : "") + (parseInt(todoDate.getMonth()) + 1)
+                 + "/" + (todoDate.getDate() < 10 ? "0" : "") + todoDate.getDate() + "/" + todoDate.getFullYear()
+                }/>
               </ListItemButton>
           </Card>
         </Grid>
